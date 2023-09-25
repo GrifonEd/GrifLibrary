@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".ProfileEditActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shape_toolbar01">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_back_white">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Редактирование профиля"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileTv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_below="@id/titleTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_person_grey"
+            app:shapeAppearance="@style/styleRoundedCornersImage">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="225dp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameTil"
+            app:hintEnabled="false">
+            
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameEt"
+                android:drawableStart="@drawable/ic_person_grey"
+                android:drawablePadding="10dp"
+                android:background="@drawable/shape_edittext01"
+                android:inputType="textPersonName|textCapWords"
+                android:hint="Имя"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey">
+
+            </EditText>
+
+            
+            
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTil"
+            android:layout_marginTop="15dp"
+            android:id="@+id/lovelyAuthorTil"
+            app:hintEnabled="false">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lovelyAuthorEt"
+                android:drawableStart="@drawable/ic_person_grey"
+                android:drawablePadding="10dp"
+                android:background="@drawable/shape_edittext01"
+                android:hint="Любимый автор"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey">
+
+            </EditText>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lovelyAuthorTil"
+            android:layout_marginTop="15dp"
+            android:id="@+id/lovelyCategoryTil"
+            app:hintEnabled="false">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lovelyCategoryEt"
+                android:drawableStart="@drawable/ic_person_grey"
+                android:drawablePadding="10dp"
+                android:background="@drawable/shape_edittext01"
+                android:hint="Любимый жанр"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey">
+
+            </EditText>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lovelyCategoryTil"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/shape_button_delete"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Обновить"
+            android:textColor="@color/white">
+
+        </Button>
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

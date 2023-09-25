@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "244535719078",
+    "project_id": "griflibrary",
+    "storage_bucket": "griflibrary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244535719078:android:10f05a9b3b736dab6f7067",
+        "android_client_info": {
+          "package_name": "com.example.griflibrary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244535719078-80b7134a45lc811qk80c5bfqg3fcpkof.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.griflibrary",
+            "certificate_hash": "9b23f39930f6a085050344ce30f8a56356446234"
+          }
+        },
+        {
+          "client_id": "244535719078-hrpg9tv5hvmpdsrn6unic3j717v23n9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_Z2AgXt5JNjQr_0QtCLPsr5J4fRw8YuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244535719078-hrpg9tv5hvmpdsrn6unic3j717v23n9n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/norm">
+
+
+</View>
+
+<RelativeLayout
+    android:id="@+id/toolBarRl"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_toolbar02"
+    android:layout_height="?actionBarSize">
+
+
+    <ImageButton
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="12dp"
+        android:id="@+id/backBtn"
+        android:src="@drawable/ic_back_white">
+
+    </ImageButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleTv"
+        android:layout_centerInParent="true"
+        android:text="Профиль"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        >
+    </TextView>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileEditBtn"
+        android:src="@drawable/ic_edit_white"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorPrimary">
+
+    </ImageButton>
+
+
+</RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_rect01"
+        android:layout_marginTop="190dp"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/profileTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_person_grey"
+        app:shapeAppearance="@style/styleRoundedCornersImage"
+        >
+
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTv"
+        android:layout_below="@+id/profileTv"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="Full name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailTv"
+        android:layout_below="@id/nameTv"
+        android:text="example"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTv"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:id="@+id/linearData"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Читатель с :"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N/A"
+            android:id="@+id/memberData"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/linearData"
+        android:text="Читательская статистика"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp">
+
+    </TextView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearData"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/linearAuthor"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Любимый автор:"
+        android:layout_marginStart="5dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lovelyAuthor"
+            android:gravity="end"
+            android:layout_marginEnd="30dp"
+            android:text="А.С Пушкин"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearAuthor"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/linearCategory"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Любимый жанр:"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lovelyCategory"
+            android:text="Фантастика"
+            android:gravity="end"
+            android:layout_marginEnd="30dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearCategory"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/linearBall"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Количество баллов"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberBall"
+            android:text="22"
+            android:gravity="end"
+            android:layout_marginEnd="30dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearBall"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/linearPodpiska"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Подписка"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/havePodpiska"
+            android:text="Есть"
+            android:gravity="end"
+            android:layout_marginEnd="30dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearPodpiska"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/numberBooksReaded"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Количество прочитанных книг"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/booksReaded"
+            android:text="5"
+            android:gravity="end"
+            android:layout_marginEnd="30dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

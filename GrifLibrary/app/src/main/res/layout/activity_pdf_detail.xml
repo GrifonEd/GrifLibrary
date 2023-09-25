@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".PdfDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backBtn3"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@color/colorPrimary"
+            android:src= "@drawable/ic_back_btn"
+            >
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/BookDet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Подробнее о книге"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_above="@+id/bookOptionsL"
+        android:layout_below="@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="152dp"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/pdfRl"
+                    android:background="@color/grey">
+
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/pdfView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                    </com.github.barteksc.pdfviewer.PDFView>
+
+                    <ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/progressBar2">
+
+                    </ProgressBar>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/titleTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:text="Book Title"
+                    android:layout_toEndOf="@+id/pdfRl">
+
+
+                </TextView>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTv"
+                    android:layout_toEndOf="@id/pdfRl">
+
+                    <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/categoryLabelTv"
+                        style="@style/TextAppearance.MaterialComponents.Caption"
+                        android:layout_marginEnd="5dp"
+                        android:text="Жанр">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/categoryTv"
+                        style="@style/TextAppearance.MaterialComponents.Caption"
+                        android:layout_marginEnd="5dp"
+                        android:text="N/A">
+
+                    </TextView>
+
+
+                </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/DateLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Год издания">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dateTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/A">
+
+                        </TextView>
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/authorLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Автор">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/authorTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/A">
+
+                        </TextView>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/VolumeLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Объем">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/volumeTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/A">
+
+                        </TextView>
+
+
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/LabelSize"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Размер">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sizeTv1"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/A">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:text="Рейт"
+                            android:layout_marginStart="10dp">
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:text="инг">
+                        </TextView>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ViewslabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Просмотры">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/viewsTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/A">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rating"
+                            android:gravity="end"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginStart="10dp"
+                            android:text="N/A">
+
+                        </TextView>
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/ratingImage"
+                            android:src="@drawable/ic_rating"
+                            >
+
+                        </ImageView>
+
+                    </TableRow>
+
+
+                </TableLayout>
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="The description of the book"
+                android:textColor="@color/black"
+                >
+
+            </TextView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookOptionsL"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/readBookBtn"
+        android:layout_alignParentBottom="true"
+        android:text="Читать"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:drawableTop="@drawable/ic_book_white"
+        android:background="@color/colorPrimary">
+
+
+    </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/downloadBookBtn"
+            android:layout_weight="1"
+
+            android:layout_alignParentBottom="true"
+            android:text="Загрузить"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/ic_download_white"
+            android:background="@color/colorPrimary">
+
+        </Button>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
